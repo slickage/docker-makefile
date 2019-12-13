@@ -1,3 +1,5 @@
 #!/bin/bash
 # git version script
-git rev-parse --short HEAD
+BRANCH=$(git rev-parse --abbrev-ref HEAD)
+HASH=$(git rev-parse --short HEAD)
+echo $BRANCH-$HASH
